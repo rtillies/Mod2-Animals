@@ -12,12 +12,13 @@
 **Important** Answer these questions in this file on your `main` branch.  When finished with the questions, commit and push your main branch.  You do not need to create a pull request yet!
 
 1. What does TDD stand for?
-
+TDD stands for Test Driven Development
 1. What are three benefits of using TDD?
-
+Helps with refactoring your code by making a failing test that you mold to how you think the code should work then improving your code when you actually make it. Also helps with creating methods that you never thought of prior. Helps developers with accurately brainstroming how your code should work when its used in the real world. You are able to discover problems a lot faster, so it helps with debugging before those problems show up making it faster than manual testing.
 1. Imagine you are in an interview.  The interviewer asks: How do you use TDD? How would you answer?
-
+The way I use TDD is, I test all of the classes and their methods before I create them to better understand my code and identify any issues before they transpire.
 1. For the class below, outline the tests you would need.  Try to use as much C# syntax as possible. The first test has been provided for you. (this question is worth 4 points)
+
 ```c#
 public class Dog
     {
@@ -25,24 +26,24 @@ public class Dog
         public string Breed { get; }
         public bool IsHungry { get; private set; }
 
-        public Dog(string name, string breed)
+        public Dog(string name, string breed) ----//Create a test here to test if my Dog object gets created with correct properties
         {
             Name = name;
             Breed = breed;
             IsHungry = true;
         }
 
-        public void Eat()
-        {
+        public void Eat()-----//Test all three of these methods and assert that isHungry is true or false and that my Speak() method makes my Dog "Bark Bark"
+        {                       
             IsHungry = false;
         }
 
-        public void Sleep()
+        public void Sleep()-----
         {
             IsHungry = true;
         }
 
-        public string Speak()
+        public string Speak()------
         {
             return "Bark Bark!";
         }
