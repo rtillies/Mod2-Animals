@@ -1,4 +1,4 @@
-# Mod2 Week2 Assessment - <YOUR NAME HERE>
+# Mod2 Week2 Assessment -Isiah Worsham
 
 ## Setup
 1. Fork this repository.
