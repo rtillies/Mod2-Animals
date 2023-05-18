@@ -51,22 +51,40 @@ public class Dog
 ```
 ```c#
 // Add your tests here
+[FACT]
+public void DogMethod_EatAssertsIsHungryFalse()
+{
+    Dog dog = new Dog("Nile", "Golden Retriever");
+    dog.Eat();
+    Assert.False(False, dog.IsHungry);
+    dog.Sleep();
+    Assert.True(True,dog.IsHungry);
+}
+[Fact]
+public void DogMethod_SpeakReturnsString()
+{
+    Dog dog = new Dog("Nile", "Golden Retriever");
+   dog.Speak();
+    Assert.Equal("Bark Bark",dog.Speak());
 
+
+[
 [Fact]
 public void DogHasNameAttribute()
 {
     Dog dog = new Dog("Nile", "Golden Retriever");
+ 
 
     Assert.Equal("Nile", dog.Name);
 }
 ```
 
 5. What is a merge conflict, and when might you encounter one?
-
+A merge conflict happens when you try to merge two similar PRs and they overlap causing it to conflict with each other.
 1. You and a partner are working on a project together.  Your partner is working on aa-branch; you are working on bb-branch.  In as much detail as possible, describe how you both would get your work combined onto the main branch.
-
+We both would create PRs on Github merge them then pull back to VS where you will go to Git changes to merge both of yalls branches to the main branch then push it back up.
 1. Why is it good practice to have someone else approve and/or merge your PR?  
-  
+  That way they have seen and analyzed your code before it was pulled into their repository.
 **Before moving on to the next section, commit your work and push your main branch!**
   
 ## Git Exercise (6 points possible)
